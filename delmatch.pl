@@ -29,5 +29,5 @@ if (defined $ARGV[0]) {
     }
   }
 } else {
-  print "Usage: perl delmatch.pl root/path regular_expression"
+  print "Usage: 'perl delmatch.pl [root/path] regular_expression' if you omit the root/path the current working directory will be selected"
 }
