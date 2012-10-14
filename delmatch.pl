@@ -32,14 +32,14 @@ if (defined $ARGV[0]) {
 sub process_files {
     my $path = shift;
 
-    opendir (DIR, $path) or die "Unable to open $path: $!";
+    opendir(DIR, $path) or die "Unable to open $path: $!";
 
     my @files = 
         map { $path . '/' . $_ } 
         grep { !/^\.{1,2}$/ } 
-        readdir (DIR);
+        readdir(DIR);
 
-    closedir (DIR);
+    closedir(DIR);
 
     for (@files) {
         if (-d $_) {
